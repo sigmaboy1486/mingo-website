@@ -9,7 +9,7 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: radial-gradient(circle at top, #0a0a0a, #000000);
+    background: radial-gradient(circle at top, #0a0a0a, #000);
     color: white;
     text-align: center;
 }
@@ -41,7 +41,6 @@ header p {
 .title {
     font-size: 32px;
     margin-bottom: 50px;
-    letter-spacing: 1px;
 }
 
 /* GRID */
@@ -59,24 +58,21 @@ header p {
     border: 1px solid rgba(255,215,0,0.2);
     border-radius: 18px;
     padding: 35px 25px;
-    transition: all 0.35s ease;
+    transition: 0.35s;
     cursor: pointer;
     position: relative;
     overflow: hidden;
 }
 
-/* glow line effect */
+/* Glow sweep */
 .card::before {
     content: "";
     position: absolute;
-    top: -50%;
-    left: -50%;
     width: 200%;
     height: 200%;
     background: linear-gradient(120deg, transparent, rgba(255,215,0,0.3), transparent);
     transform: rotate(25deg);
     opacity: 0;
-    transition: 0.5s;
 }
 
 .card:hover::before {
@@ -110,13 +106,12 @@ header p {
 }
 
 .icon img {
-    width: 36px;
+    width: 38px;
 }
 
 /* TEXT */
 .card h2 {
     margin: 10px 0;
-    letter-spacing: 1px;
 }
 
 .role {
@@ -141,11 +136,9 @@ footer {
     opacity: 0.5;
 }
 
-/* RESPONSIVE */
+/* MOBILE */
 @media(max-width: 600px) {
-    header h1 {
-        font-size: 36px;
-    }
+    header h1 { font-size: 36px; }
 }
 </style>
 </head>
@@ -158,62 +151,62 @@ footer {
 </header>
 
 <div class="container">
-    <div class="title">Meet the Team </div>
+    <div class="title">Meet the Team 🚀</div>
 
     <div class="profiles">
 
-        <div class="card" onclick="openProfile('shreyas.html')">
+        <div class="card" onclick="go('shreyas.html')">
             <div class="icon">
                 <img src="manager.png">
             </div>
             <h2>SHREYAS</h2>
-            <div class="role">TEAM MANAGER</div>
+            <div class="role">PROJECT MANAGER</div>
             <div class="desc">
-                Leads the team with vision and ensures smooth planning, coordination and execution.
+                Leads the team with vision and ensures smooth execution.
             </div>
         </div>
 
-        <div class="card" onclick="openProfile('gandharv.html')">
+        <div class="card" onclick="go('gandharv.html')">
             <div class="icon">
                 <img src="design.png">
             </div>
             <h2>GANDHARV</h2>
             <div class="role">DESIGN ENGINEER</div>
             <div class="desc">
-                Designs and develops innovative concepts and ensures performance through engineering.
+                Designs innovative concepts and optimizes performance.
             </div>
         </div>
 
-        <div class="card" onclick="openProfile('sachit.html')">
+        <div class="card" onclick="go('sachit.html')">
             <div class="icon">
                 <img src="manufacturing.png">
             </div>
             <h2>SACHIT</h2>
             <div class="role">MANUFACTURING LEAD</div>
             <div class="desc">
-                Oversees production, ensures precision and maintains quality at every step.
+                Ensures precision and quality in production.
             </div>
         </div>
 
-        <div class="card" onclick="openProfile('navyam.html')">
+        <div class="card" onclick="go('navyam.html')">
             <div class="icon">
                 <img src="marketing.png">
             </div>
             <h2>NAVYAM</h2>
             <div class="role">MARKETING LEAD</div>
             <div class="desc">
-                Handles branding, social media and outreach to build presence and partnerships.
+                Builds brand presence and manages outreach.
             </div>
         </div>
 
-        <div class="card" onclick="openProfile('anish.html')">
+        <div class="card" onclick="go('anish.html')">
             <div class="icon">
                 <img src="analytics.png">
             </div>
             <h2>ANISH</h2>
             <div class="role">STRATEGY & ANALYTICS</div>
             <div class="desc">
-                Analyzes data, plans strategies and drives performance with insightful decisions.
+                Drives decisions through data and strategy.
             </div>
         </div>
 
@@ -225,7 +218,7 @@ footer {
 </footer>
 
 <script>
-function openProfile(page) {
+function go(page) {
     window.location.href = page;
 }
 </script>
