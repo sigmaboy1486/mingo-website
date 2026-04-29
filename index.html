@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MINGO Team</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #050505;
+    color: white;
+    text-align: center;
+}
+
+header {
+    padding: 30px;
+    border-bottom: 1px solid gold;
+}
+
+header h1 {
+    color: gold;
+    font-size: 42px;
+    margin: 0;
+}
+
+.container {
+    padding: 50px 20px;
+}
+
+.title {
+    font-size: 28px;
+    margin-bottom: 50px;
+}
+
+.profiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.card {
+    background: #0a0a0a;
+    border: 1px solid rgba(255,215,0,0.3);
+    border-radius: 15px;
+    padding: 30px;
+    transition: 0.3s;
+    cursor: pointer;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border: 1px solid gold;
+    box-shadow: 0 0 20px gold;
+}
+
+/* ICON STYLE */
+.icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid gold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.icon img {
+    width: 35px;
+}
+
+/* TEXT */
+.card h2 {
+    margin: 10px 0;
+    letter-spacing: 1px;
+}
+
+.role {
+    color: gold;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.desc {
+    font-size: 13px;
+    opacity: 0.8;
+    line-height: 1.5;
+}
+
+footer {
+    margin-top: 60px;
+    padding: 20px;
+    font-size: 14px;
+    opacity: 0.5;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>MINGO</h1>
+    <p>Small. Fast. Mingo.</p>
+</header>
+
+<div class="container">
+    <div class="title">Meet the Team 🚀</div>
+
+    <div class="profiles">
+
+        <div class="card" onclick="openProfile('shreyas.html')">
+            <div class="icon">
+                <img src="manager.png">
+            </div>
+            <h2>SHREYAS</h2>
+            <div class="role">TEAM MANAGER</div>
+            <div class="desc">
+                Leads the team with vision and ensures smooth planning, coordination and execution.
+            </div>
+        </div>
+
+        <div class="card" onclick="openProfile('gandharv.html')">
+            <div class="icon">
+                <img src="design.png">
+            </div>
+            <h2>GANDHARV</h2>
+            <div class="role">DESIGN ENGINEER</div>
+            <div class="desc">
+                Designs and develops innovative concepts and ensures performance through engineering.
+            </div>
+        </div>
+
+        <div class="card" onclick="openProfile('sachit.html')">
+            <div class="icon">
+                <img src="manufacturing.png">
+            </div>
+            <h2>SACHIT</h2>
+            <div class="role">MANUFACTURING LEAD</div>
+            <div class="desc">
+                Oversees production, ensures precision and maintains quality at every step.
+            </div>
+        </div>
+
+        <div class="card" onclick="openProfile('navyam.html')">
+            <div class="icon">
+                <img src="marketing.png">
+            </div>
+            <h2>NAVYAM</h2>
+            <div class="role">MARKETING LEAD</div>
+            <div class="desc">
+                Handles branding, social media and outreach to build presence and partnerships.
+            </div>
+        </div>
+
+        <div class="card" onclick="openProfile('anish.html')">
+            <div class="icon">
+                <img src="analytics.png">
+            </div>
+            <h2>ANISH</h2>
+            <div class="role">STRATEGY & ANALYTICS</div>
+            <div class="desc">
+                Analyzes data, plans strategies and drives performance with insightful decisions.
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    © 2026 MINGO Racing | STEM Racing Team
+</footer>
+
+<script>
+function openProfile(page) {
+    window.location.href = page;
+}
+</script>
+
+</body>
+</html>
